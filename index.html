@@ -648,11 +648,23 @@
     <textarea name="message" placeholder="Tell me about your project or collaboration opportunity..." required></textarea>
 </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">
-                            🚀 Start the Conversation
-                        </button>
-                        <div id="form-status"></div>
-                        document.addEventListener('DOMContentLoaded', function() {
+    🚀 Start the Conversation
+</button>
+<div id="form-status"></div>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form[action*="formspree"]');
+    
+    if (!form) {
+        console.log('Form not found!');
+        return;
+    }
     
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -677,13 +689,11 @@
             document.getElementById('form-status').innerHTML = 
                 '<p style="color: red; margin-top: 10px;">Sorry, there was an error. Please try again.</p>';
         });
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    });
+});
+</script>
 
-    <!-- Footer -->
+<!-- Footer -->
 <footer class="footer">
     <div class="container">
         <p>&copy; 2025 Mridula R | Global Health & Innovation Strategist</p>
