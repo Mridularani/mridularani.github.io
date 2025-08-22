@@ -698,15 +698,14 @@
         });
 
         // Form submission handling
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show success message
-            alert('Thank you for your message! I\'ll get back to you within 24 hours.');
-            
-            // Reset form
-            this.reset();
-        });
+        // Form submission handling
+document.querySelector('form').addEventListener('submit', function(e) {
+    // Let the form submit naturally to Formspree
+    // Show success message after a brief delay
+    setTimeout(() => {
+        alert('Thank you for your message! I\'ll get back to you within 24 hours.');
+    }, 100);
+});
 
         // Add interactive hover effects
         document.querySelectorAll('.project-card, .expertise-card').forEach(card => {
